@@ -11,25 +11,28 @@
     <application
         android:allowBackup="false"
         android:label="Pulse Timer"
-        android:theme="@android:style/Theme.Material.NoActionBar"
-        android:usesCleartextTraffic="false">
+        android:theme="@android:style/Theme.Material.NoActionBar">
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <service
             android:name=".TimerService"
             android:exported="false"
             android:foregroundServiceType="specialUse">
+
             <property
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="User-started countdown timer with periodic audio cues" />
+
         </service>
 
     </application>
